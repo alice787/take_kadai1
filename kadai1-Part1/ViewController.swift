@@ -8,24 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     // 画面上のtextViewから下に向かって1〜5
-    @IBOutlet weak var textField1: UITextField!
-    @IBOutlet weak var textField2: UITextField!
-    @IBOutlet weak var textField3: UITextField!
-    @IBOutlet weak var textField4: UITextField!
-    @IBOutlet weak var textField5: UITextField!
+    @IBOutlet private weak var textField1: UITextField!
+    @IBOutlet private weak var textField2: UITextField!
+    @IBOutlet private weak var textField3: UITextField!
+    @IBOutlet private weak var textField4: UITextField!
+    @IBOutlet private weak var textField5: UITextField!
     
-    @IBOutlet weak var resultLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+    @IBOutlet private weak var resultLabel: UILabel!
 
-
-    @IBAction func pressButton(_ sender: Any) {
-        
+    @IBAction private func pressButton(_ sender: Any) {
         let num1 = Int(textField1.text ?? "") ?? 0
         let num2 = Int(textField2.text ?? "") ?? 0
         let num3 = Int(textField3.text ?? "") ?? 0
